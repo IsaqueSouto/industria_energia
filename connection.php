@@ -1,5 +1,7 @@
 <?php
 require_once __DIR__ . '/config.php';
+$host = 'db';
+$port = 3306; // mantém assim dentro do container
 
 function getPDO() {
     static $pdo = null;
@@ -10,11 +12,13 @@ function getPDO() {
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
             PDO::ATTR_EMULATE_PREPARES   => false,
         ];
-        try {
-            $pdo = new PDO($dsn, DB_USER, DB_PASS, $options);
-        } catch (PDOException $e) {
-            exit('Conexão falhou: ' . $e->getMessage());
-        }
+       try {
+    $pdo = new PDO("mysql:host=db;dbname=producao;charset=utf8", "root", "root");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo "Conexão falhou: " . $e->getMessage();
+}
+
     }
     return $pdo;
 }
