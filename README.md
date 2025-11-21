@@ -1,22 +1,25 @@
-# CRUD de Produção Industrial
+# Industrial Production CRUD
 
-Este projeto é um sistema simples em PHP para controlar registros de produção industrial. Ele permite cadastrar, listar, editar e excluir informações usando um banco de dados MySQL.
+This project is a simple PHP system for managing industrial production
+records. It allows creating, listing, editing, and deleting information
+using a MySQL database.
 
-## Tecnologias
-- PHP
-- MySQL
-- HTML e CSS
+## Technologies
 
-## Como usar
-1. Importe o arquivo `schema.sql` no MySQL.
-2. Ajuste as credenciais no `config.php`.
-3. Coloque o projeto no servidor local.
-4. Acesse no navegador: http://localhost/crud_producao_industrial/
+-   PHP
+-   MySQL
+-   HTML and CSS
 
-## Funcionalidades
-- Cadastro
-- Visualização
-- Edição
-- Remoção
-- Edição
-- Remoção
+## How to Use
+
+1.  Import the `schema.sql` file into MySQL.
+2.  Adjust the credentials in `config.php`.
+3.  Upload the project to your local server.
+4.  Access in the browser: http://localhost/crud_producao_industrial/
+
+## Features
+
+-   Create
+-   Read
+-   Update
+-   Delete
